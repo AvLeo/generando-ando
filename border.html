@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .divForm {
+            display: flex;
+            margin-bottom: 10px;
+            gap: 10px;
+        }
+
+        .form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .celestep {
+            border: 2px solid lightblue;
+        }
+
+        .azulp {
+            border: 2px dashed blue;
+        }
+
+        .beigep {
+            border: 2px dashed beige;
+        }
+
+        p {
+            background-color: white;
+            padding: 20px;
+            width: 70%;
+            min-height: 500px;
+            color: black;
+            border-radius: 20px;
+        }
+    </style>
+    <h1>Borde punteado Azul/Rojo</h1>
+    <form action="" class="form">
+
+        <div class="divForm">
+            <select name="" id="typeBorder">
+                <option value="azulp">Azul Punteado</option>
+                <option value="beigep">Beige Punteado</option>
+                <option value="celestep">Celeste Linea</option>
+            </select>
+            <div class="azulp">Muestra</div>
+        </div>
+
+        <div class="divForm">
+            <label for="tMomento">Titulo</label>
+            <input type="text" id="tMomento">
+        </div>
+
+        <div class="divForm">
+            <label for="">Texto</label>
+            <textarea name="" id="texto"></textarea>
+        </div>
+    </form>
+    <button type="submit" id="generateBorder">
+        Generar
+    </button>
+
+    <p id="code">
+
+    </p>
+
+    <script src="./generarBorder.js"></script>
+</body>
+
+</html>

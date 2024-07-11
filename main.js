@@ -4,6 +4,7 @@ const $nMomento = $('#nMomento')
 const $tMomento = $('#tMomento')
 const $tInMomento = $('#tInMomento')
 const $btnGenerate = $('#generate')
+const $btnBorder = $('#generarBorder')
 
 const Momento = (nMomento, tMomento, tInMomento) => {
     return `
@@ -33,7 +34,7 @@ const Momento = (nMomento, tMomento, tInMomento) => {
 
 const generateMomento = () => {
     const nMomento = ($nMomento.value).trim()
-    const tMomento = ($tMomento.value).trim()
+    const tMomento = ($tMomento.value).trim().toUpperCase()
     const tInMomento = ($tInMomento.value).trim()
 
     if(tMomento === "" || nMomento === "") return alert("N° de momento o titulo de momento no puede estar vacio")
@@ -53,3 +54,5 @@ $btnGenerate.addEventListener('click', (e) => {
     $('#code').innerText = ""
     $('#code').innerText = momento
 })
+
+$btnBorder.addEventListener('click', (e) => window.location.assign('border.html'))
